@@ -1,0 +1,22 @@
+# Datasets (download separately)
+data/raw/
+data/processed/
+data/plots/
+
+# Model artefacts
+*.pkl
+*.parquet
+
+# Python
+__pycache__/
+*.py[cod]
+.env
+venv/
+.venv/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# OS
+.DS_Store
+Thumbs.db
