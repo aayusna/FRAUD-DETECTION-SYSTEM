@@ -87,6 +87,26 @@ fraud-detection-v2/
 
 ---
 
+## 🖥️ System Demo
+
+<img width="1111" height="697" alt="Screenshot 2569-05-06 at 11 37 25 AM" src="https://github.com/user-attachments/assets/1a404a94-ab2d-44ee-8e9f-8da32efb1a5b" />
+
+---
+
+## ⚙️ How It Works: System Architecture & Approach
+
+**Our real-time fraud detection system operates on a strict 100ms budget. The workflow is designed for speed and surgical precision:**
+
+Transaction Interception: A transaction hits the FastAPI endpoint.
+
+Instant Enrichment: The system instantly enriches the raw data with behavioral history and NLP classifications.
+
+Dual-Scoring: The enriched data is processed through a dual-model machine learning ensemble.
+
+Decision Engine: The system returns a final Block, Review, or Approve decision before the user's loading screen finishes spinning.
+
+---
+
 ## 🚀 Quick Start
 
 ### 1. Install
@@ -146,6 +166,15 @@ curl -X POST http://localhost:8000/predict/transaction \
 
 ---
 
+## ✨ Key Features & Tech Stack
+
+⚡ Sub-100ms Inference Engine: Built on FastAPI to handle high-throughput, low-latency financial transactions seamlessly.
+
+🛡️ Dual-Model Ensemble: Combines XGBoost (supervised learning on historical fraud) with an Isolation Forest (unsupervised anomaly detection for novel, zero-day fraud tactics) via Scikit-Learn.
+
+📊 Interactive SOC Dashboard: A beautifully designed Streamlit interface for Security Operation Center (SOC) analysts to monitor live feeds and analyze transactions.
+
+---
 ## 🔬 Feature Engineering — The Secret Weapon
 
 Most fraud detection tutorials skip this. This project has a **full feature engineering layer** (`src/features/engineer.py`) that runs at inference time:
